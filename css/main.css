@@ -1,0 +1,279 @@
+
+/* Init & tools */
+:root {
+	font-size   : 1rem;
+	--helvetica : Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.img-fit {
+	height     : auto;
+	width      : 100%;
+
+	object-fit : cover;
+}
+
+.border{
+	border     : 3px white solid;
+}
+
+.center {
+	margin : 0 auto;
+}
+
+a:link, a:visited, a:active {
+	color           : white;
+	text-decoration : none;
+}
+
+.tooltip {
+	position      : relative;
+	display       : inline-block;
+
+	border-bottom : 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+	position          : absolute;
+	bottom            : 90%;
+	left              : 50%;
+	visibility        : hidden;
+	z-index           : 1;
+
+	width             : 80%;
+	padding           : 8px;
+
+	opacity           : 0;
+	background        : linear-gradient(344deg, #6bffed, #f2ff77);
+	background-color  : black;
+	background-size   : 100% 100%;
+	font-size         : 12px;
+	color             : #000;
+	text-align        : center;
+	border-radius     : 6px;
+
+	-webkit-animation : fur 0s ease infinite;
+	-moz-animation    : fur 0s ease infinite;
+	animation         : fur 0s ease infinite;
+	transition        : 0.2s ease;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility : visible;
+
+	opacity    : 1;
+
+	transition : 0.2s ease;
+
+	
+}
+
+/* keyframes */
+@-webkit-keyframes furAnim {
+	0%{background-position:20% 0%}
+
+	50%{background-position:81% 100%}
+
+	100%{background-position:20% 0%}
+}
+
+@-moz-keyframes furAnim {
+	0%{background-position:20% 0%}
+
+	50%{background-position:81% 100%}
+
+	100%{background-position:20% 0%}
+}
+
+@-o-keyframes furAnim {
+	0%{background-position:20% 0%}
+
+	50%{background-position:81% 100%}
+
+	100%{background-position:20% 0%}
+}
+
+@keyframes furAnim {
+	0%{background-position:20% 0%}
+
+	50%{background-position:81% 100%}
+
+	100%{background-position:20% 0%}
+}
+
+@keyframes bouncy {
+	0%{top:0em}
+
+	40%{top:0em}
+
+	43%{top:-0.9em}
+
+	46%{top:0em}
+
+	48%{top:-0.4em}
+
+	50%{top:0em}
+
+	100%{top:0em;}
+}
+
+body {
+	background              : url(../img/bg.jpg) no-repeat center center fixed;
+	background-size         : cover;
+
+	-webkit-background-size : cover;
+	-moz-background-size    : cover;
+	-o-background-size      : cover;
+}
+
+.button-style {
+	position          : relative;
+	display           : inline-block;
+	box-sizing        : border-box;
+
+	padding           : 0.35em 1.2em;
+
+	font-family       : Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size         : 1.2rem;
+	letter-spacing    : 1px;
+	text-align        : center;
+	border            : 0.1em solid white;
+	border-radius     : 0.12em;
+
+	-webkit-animation : bouncy 5s infinite linear;
+	-moz-animation    : bouncy 5s infinite linear;
+	animation         : bouncy 5s infinite linear;
+	transition        : all 0.2s;
+
+	
+}
+
+.button-style-2 {
+	position          : relative;
+	display           : inline-block;
+	box-sizing        : border-box;
+	min-width         : 40%;
+
+	padding           : 0.35em 1.2em;
+
+	font-family       : Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size         : 1.2rem;
+	letter-spacing    : 1px;
+	text-align        : center;
+	border            : 0.1em solid white;
+	border-radius     : 0.12em;
+
+	transition        : all 0.2s;
+
+	
+}
+
+.button-style:hover{
+	background-color : #FFFFFF;
+	color            : #000000;
+}
+.button-style-2:hover{
+	background-color : #FFFFFF;
+	color            : #000000;
+}
+
+.sidebar-contain {
+	display   : flex;
+	max-width : 100%;
+}
+
+.hero-contain{
+	width : 70%;
+}
+
+.yt-v {
+	min-height : 400px;
+	min-width  : 700px;
+	margin     : 0;
+	padding    : 0;
+}
+
+.info-contain {
+	display         : flex;
+	justify-content : center;
+}
+
+.sidebar {
+	display         : flex;
+
+	height          : inherit;
+	width           : inherit;
+	padding         : 20px;
+
+	border-radius   : 10px;
+
+	justify-content : center;
+	flex-direction: row;
+}
+.sidebar2 {
+	display         : flex;
+
+	height          : inherit;
+	width           : inherit;
+	padding         : 0px;
+
+	border-radius   : 10px;
+
+	justify-content : center;
+	flex-direction: row;
+}
+
+.poster-contain {
+	max-width : 60%;
+}
+
+.info-contain > div {
+	margin : 2%;
+}
+
+.sidebar > a {
+	margin-right : 1%;
+	margin-left  : 1%;
+}
+
+@media only screen 
+and (max-width : 712px)
+{ 
+
+	.info-contain {
+		flex-direction: column;
+		align-items: center;
+}
+	
+
+.sidebar {
+	flex-direction: column;
+}
+
+.hero-contain{
+	width : 100%;
+}
+
+.poster-contain {
+	max-width : 100%;
+}
+
+.sidebar > a {
+	margin-top : 1%;
+	margin-bottom  : 1%;
+}
+
+.yt-v {
+	min-height : 100%;
+	min-width  : 100%;
+	margin     : 0;
+	padding    : 0;
+}
+
+.tooltip .tooltiptext {
+	bottom            : 90%;
+	left              : 50%;
+
+	width             : 50%;
+}
+
+} 
